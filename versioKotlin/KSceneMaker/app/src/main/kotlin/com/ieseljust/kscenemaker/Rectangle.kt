@@ -21,7 +21,7 @@ class Rectangle: Figura {
         this.height=height
          
      }
-
+//holaasdhasgdhasgd
     override fun describeMe() {
         /*
         * Mètode que mostra en mode text una descripció de la figura per la consola.
