@@ -1,24 +1,26 @@
-@file:JvmName("Rectangle")
+@file:JvmName("Quadrat")
 
 package com.ieseljust.kscenemaker
 
 import java.awt.Graphics
 import java.awt.Color
 
-class Rectangle: Figura {
+class Quadrat: Figura {
 
     // Inicialitzem les variables en la delcaració mateix
     // No utilitzarem cap constructor primari
     var width: Int=100
-    var height: Int=100
+    var width2: Int=100
+    
     
     // Constructors secundaris
     constructor():super() //Sense arguments
 
-    constructor(x: Int, y:Int, width:Int=100, height:Int=100, color:Color=Color.BLACK): super(x, y, color) {
+    constructor(x: Int, y:Int, width:Int=150, color:Color=Color.YELLOW): super(x, y, color) {
         //super(x, y, color)
         this.width=width
-        this.height=height
+        this.width2=width
+        
          
      }
 
@@ -27,13 +29,13 @@ class Rectangle: Figura {
         * Mètode que mostra en mode text una descripció de la figura per la consola.
         * S'utilitzarà per al mètode llista de la CLI.
         */
-        println("rectangle " + x + " " + y + " " + width + " " + height + " " + color)
+        println("quadrat " + x + " " + y + " " + width + " " + color)
     }
 
     override fun render(g:Graphics) {
         
         /*
-         * Mètode que dibuixa sobre un context gràfic la figura rectangle.
+         * Mètode que dibuixa sobre un context gràfic la figura quadrat.
          * S'utilitza per al mètode render() de App.
          * 
          * Per dibuixar altres primitives de la classe Graphics, podeu consultar
@@ -45,7 +47,7 @@ class Rectangle: Figura {
          */
 
         g.setColor(color)             // Establim el color interior
-        g.fillRect(x, y, width, height)    // Dibuixem un rectangle en la posició i mida indicades
+        g.fillRect(x, y, width, width2)    // Dibuixem un quadrat en la posició i mida indicades
     }
 
 }

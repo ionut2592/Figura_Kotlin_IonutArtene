@@ -1,24 +1,21 @@
-@file:JvmName("Rectangle")
+@file:JvmName("Linia")
 
 package com.ieseljust.kscenemaker
 
 import java.awt.Graphics
 import java.awt.Color
 
-class Rectangle: Figura {
+class Linia: Figura {
 
-    // Inicialitzem les variables en la delcaració mateix
-    // No utilitzarem cap constructor primari
-    var width: Int=100
-    var height: Int=100
+   
+    
     
     // Constructors secundaris
     constructor():super() //Sense arguments
 
-    constructor(x: Int, y:Int, width:Int=100, height:Int=100, color:Color=Color.BLACK): super(x, y, color) {
+    constructor(x: Int, y:Int, x2: Int, y2:Int, color:Color=Color.RED): super(x, y, x2, y2 ,color) {
         //super(x, y, color)
-        this.width=width
-        this.height=height
+       
          
      }
 
@@ -27,13 +24,13 @@ class Rectangle: Figura {
         * Mètode que mostra en mode text una descripció de la figura per la consola.
         * S'utilitzarà per al mètode llista de la CLI.
         */
-        println("rectangle " + x + " " + y + " " + width + " " + height + " " + color)
+        println("Linia " + x + " " + y + " " + x2 + " " + y2 + " " + color)
     }
 
     override fun render(g:Graphics) {
         
         /*
-         * Mètode que dibuixa sobre un context gràfic la figura rectangle.
+         * Mètode que dibuixa sobre un context gràfic la figura el·lipse.
          * S'utilitza per al mètode render() de App.
          * 
          * Per dibuixar altres primitives de la classe Graphics, podeu consultar
@@ -45,8 +42,7 @@ class Rectangle: Figura {
          */
 
         g.setColor(color)             // Establim el color interior
-        g.fillRect(x, y, width, height)    // Dibuixem un rectangle en la posició i mida indicades
+        g.drawLine (x, y, x2,y2)    // Dibuixem un el·lipse en la posició i mida indicades
     }
 
 }
-
