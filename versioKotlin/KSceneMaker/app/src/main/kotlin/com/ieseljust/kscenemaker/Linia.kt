@@ -30,7 +30,7 @@ class Linia: Figura {
     override fun render(g:Graphics) {
         
         /*
-         * Mètode que dibuixa sobre un context gràfic la figura el·lipse.
+         * Mètode que dibuixa sobre un context gràfic la "figura" linia.
          * S'utilitza per al mètode render() de App.
          * 
          * Per dibuixar altres primitives de la classe Graphics, podeu consultar
@@ -42,7 +42,7 @@ class Linia: Figura {
          */
 
         g.setColor(color)             // Establim el color interior
-        g.drawLine (x, y, x2,y2)    // Dibuixem un el·lipse en la posició i mida indicades
+        g.drawLine (x, y, x2,y2)    // Dibuixem una linia en la posició i mida indicades
     }
 
 }
