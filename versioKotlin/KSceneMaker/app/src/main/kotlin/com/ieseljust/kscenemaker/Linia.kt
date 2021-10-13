@@ -42,7 +42,7 @@ class Linia: Figura {
          */
 
         g.setColor(color)             // Establim el color interior
-        g.drawLine (x, y, x2,y2)    // Dibuixem una linia en la posició i mida indicades
+        g.drawLine (x, y, x2,y2)    // Dibuixem una linia en la posició indicada
     }
 
 }
